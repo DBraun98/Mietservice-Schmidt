@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mietservice Schmidt - JBL Partybox mieten</title>
+    <!-- Tailwind CSS für das Design -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            500: '#0ea5e9', // Freundliches Sky Blue
+                            600: '#0284c7',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Verstecke Scrollbar für cleane Optik auf Mobile */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f8fafc; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #0ea5e9; }
+        
+        /* Glassmorphism Effekt Hell */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Native Accordion Styling */
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-600 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-panel">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0 font-bold text-2xl tracking-tighter text-slate-900">
+                    Mietservice <span class="text-brand-500">Schmidt</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#angebot" class="text-slate-700 hover:text-brand-500 transition-colors px-3 py-2 rounded-md text-sm font-medium">Angebot</a>
+                        <a href="#zubehoer" class="text-slate-700 hover:text-brand-500 transition-colors px-3 py-2 rounded-md text-sm font-medium">Zubehör & Extras</a>
+                        <a href="#faq" class="text-slate-700 hover:text-brand-500 transition-colors px-3 py-2 rounded-md text-sm font-medium">Mietinfos</a>
+                        <a href="#kontakt" class="bg-brand-500 text-white hover:bg-brand-600 transition-colors px-4 py-2 rounded-full text-sm font-bold shadow-lg shadow-brand-500/30">Anfragen</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden min-h-[90vh] flex items-center">
+        <!-- Dekorativer Glow Background -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-500/10 blur-[120px] rounded-full pointer-events-none"></div>
+        
+        <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 border border-slate-200 text-sm font-medium mb-8 text-brand-600 shadow-sm">
+                <i data-lucide="zap" class="w-4 h-4"></i>
+                Der perfekte Sound für dein Event
+            </div>
+            <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 tracking-tight mb-6 leading-tight">
+                Mieten. Anschalten.<br />
+                <span class="text-brand-500">Feiern.</span>
+            </h1>
+            <p class="mt-4 max-w-2xl mx-auto text-xl text-slate-600 mb-10">
+                Miete die legendäre <strong>JBL Partybox 310</strong> unkompliziert und flexibel. Kraftvoller Bass, integrierte Lichtshow und kinderleichte Bedienung.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="#angebot" class="w-full sm:w-auto px-8 py-4 bg-brand-500 hover:bg-brand-600 text-white rounded-full font-bold text-lg transition-all transform hover:scale-105 shadow-lg shadow-brand-500/30 flex items-center justify-center gap-2">
+                    <i data-lucide="calendar-check" class="w-5 h-5"></i>
+                    Jetzt Verfügbarkeit anfragen
+                </a>
+                <a href="#details" class="w-full sm:w-auto px-8 py-4 bg-white hover:bg-slate-50 text-slate-900 rounded-full font-semibold text-lg transition-all border border-slate-200 flex items-center justify-center gap-2 shadow-sm">
+                    Mehr erfahren
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Offer Section -->
+    <section id="angebot" class="py-20 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row gap-12 items-center">
+                <!-- Image Placeholder -->
+                <div class="w-full lg:w-1/2">
+                    <div class="aspect-square rounded-3xl glass-panel p-8 flex flex-col items-center justify-center relative overflow-hidden group border border-slate-200 shadow-sm">
+                        <!-- Abstrakte Darstellung der Box anstelle eines echten Bildes -->
+                        <div class="absolute inset-0 bg-gradient-to-tr from-slate-100 to-white opacity-50"></div>
+                        <i data-lucide="speaker" class="w-32 h-32 text-brand-500 mb-6 drop-shadow-[0_0_30px_rgba(14,165,233,0.3)] transition-transform duration-500 group-hover:scale-110 relative z-10"></i>
+                        <span class="text-2xl font-bold text-slate-900 relative z-10">[Bild der JBL Partybox 310]</span>
+                        <div class="absolute bottom-0 w-full h-1 bg-gradient-to-r from-transparent via-brand-500 to-transparent"></div>
+                    </div>
+                </div>
+
+                <!-- Offer Details -->
+                <div class="w-full lg:w-1/2 space-y-8">
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-2">JBL Partybox 310</h2>
+                        <p class="text-brand-500 text-2xl font-bold">40 € <span class="text-lg text-slate-500 font-normal">/ Veranstaltung</span></p>
+                    </div>
+
+                    <p class="text-slate-600 text-lg">
+                        Egal ob Geburtstag, Hochzeit oder Gartenparty. Auch größere Räume mit vielen Personen sind für diese Box kein Problem.
+                        Handy, Tablet oder Laptop per Bluetooth verbinden und direkt die Lieblingsmusik abspielen!
+                    </p>
+
+                    <!-- Tech Specs Grid -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="glass-panel p-4 rounded-2xl flex items-center gap-4 border border-slate-100">
+                            <div class="bg-brand-50 p-3 rounded-xl text-brand-600">
+                                <i data-lucide="battery-charging" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Akkulaufzeit</h4>
+                                <p class="text-xs text-slate-500">Bis zu 18h (oder Stromnetz)</p>
+                            </div>
+                        </div>
+                        <div class="glass-panel p-4 rounded-2xl flex items-center gap-4 border border-slate-100">
+                            <div class="bg-brand-50 p-3 rounded-xl text-brand-600">
+                                <i data-lucide="volume-2" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Leistung</h4>
+                                <p class="text-xs text-slate-500">240 Watt Power</p>
+                            </div>
+                        </div>
+                        <div class="glass-panel p-4 rounded-2xl flex items-center gap-4 border border-slate-100">
+                            <div class="bg-brand-50 p-3 rounded-xl text-brand-600">
+                                <i data-lucide="bluetooth" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Konnektivität</h4>
+                                <p class="text-xs text-slate-500">Bluetooth, AUX, USB</p>
+                            </div>
+                        </div>
+                        <div class="glass-panel p-4 rounded-2xl flex items-center gap-4 border border-slate-100">
+                            <div class="bg-brand-50 p-3 rounded-xl text-brand-600">
+                                <i data-lucide="sparkles" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Lichtshow</h4>
+                                <p class="text-xs text-slate-500">Integrierte LEDs</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- USP Callouts -->
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3 text-slate-600">
+                            <i data-lucide="check-circle-2" class="w-6 h-6 text-brand-500 flex-shrink-0"></i>
+                            <span><strong>Flexibel:</strong> Kostenfreie Abholung bis zu 2 Tage vorher!</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-slate-600">
+                            <i data-lucide="check-circle-2" class="w-6 h-6 text-brand-500 flex-shrink-0"></i>
+                            <span><strong>Verfügbarkeit:</strong> Bis zu 6 Boxen gleichzeitig mietbar.</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-slate-600">
+                            <i data-lucide="check-circle-2" class="w-6 h-6 text-brand-500 flex-shrink-0"></i>
+                            <span><strong>All-Inclusive:</strong> Alle benötigten Kabel sind kostenlos dabei.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accessories & Extras -->
+    <section id="zubehoer" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Mache dein Event komplett</h2>
+                <p class="text-slate-600 max-w-2xl mx-auto">Vom Mikrofon für Reden bis zur kompletten Lichtanlage. Wir haben alles, was du für eine unvergessliche Party brauchst.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Zubehör Kategorie 1 -->
+                <div class="glass-panel rounded-3xl p-6 border-t-4 border-t-brand-500 shadow-sm border border-slate-100">
+                    <h3 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <i data-lucide="mic" class="text-brand-500"></i>
+                        Mikrofone
+                    </h3>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between items-center text-sm border-b border-slate-100 pb-2">
+                            <span class="text-slate-600">Kabel-Mikrofon</span>
+                            <span class="font-bold text-slate-900">+ 5 €</span>
+                        </li>
+                        <li class="flex justify-between items-center text-sm border-b border-slate-100 pb-2">
+                            <span class="text-slate-600">Kabellos (Funk)</span>
+                            <span class="font-bold text-slate-900">+ 10 €</span>
+                        </li>
+                        <li class="flex justify-between items-center text-sm">
+                            <span class="text-slate-600">Mikrofonständer</span>
+                            <span class="font-bold text-slate-900">+ 5 €</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Zubehör Kategorie 2 -->
+                <div class="glass-panel rounded-3xl p-6 border-t-4 border-t-brand-500 shadow-sm border border-slate-100">
+                    <h3 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <i data-lucide="cloud-fog" class="text-brand-500"></i>
+                        Effekte
+                    </h3>
+                    <div class="flex flex-col gap-2 mb-4">
+                        <div class="bg-slate-50 rounded-lg p-3 text-center text-xs text-slate-500 border border-slate-100">
+                            [Bild von Nebelmaschine]
+                        </div>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between items-center text-sm">
+                            <span class="text-slate-600">Nebelmaschinen</span>
+                            <span class="text-xs bg-slate-100 px-2 py-1 rounded text-slate-600">4x auf Lager</span>
+                        </li>
+                        <li class="flex justify-between items-center text-sm pt-2">
+                            <span class="text-slate-600">Lichtanlagen</span>
+                            <span class="text-xs bg-slate-100 px-2 py-1 rounded text-slate-600">4x auf Lager</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Zubehör Kategorie 3 -->
+                <div class="glass-panel rounded-3xl p-6 border-t-4 border-t-brand-500 shadow-sm border border-slate-100">
+                    <h3 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <i data-lucide="beer" class="text-brand-500"></i>
+                        Party-Games
+                    </h3>
+                    <div class="flex flex-col gap-2 mb-4">
+                        <div class="bg-slate-50 rounded-lg p-3 text-center text-xs text-slate-500 border border-slate-100">
+                            [Bild von Bierpongtisch]
+                        </div>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between items-center text-sm">
+                            <span class="text-slate-600">Bierpongtische</span>
+                            <span class="text-xs bg-slate-100 px-2 py-1 rounded text-slate-600">3x auf Lager</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Zubehör Kategorie 4 -->
+                <div class="glass-panel rounded-3xl p-6 border-t-4 border-t-brand-500 shadow-sm border border-slate-100">
+                    <h3 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <i data-lucide="tent" class="text-brand-500"></i>
+                        Ausstattung
+                    </h3>
+                    <div class="flex flex-col gap-2 mb-4">
+                        <div class="bg-slate-50 rounded-lg p-3 text-center text-xs text-slate-500 border border-slate-100">
+                            [Bild von Bierzeltgarnitur]
+                        </div>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between items-center text-sm">
+                            <span class="text-slate-600">Bierzeltgarnituren</span>
+                            <span class="text-xs bg-slate-100 px-2 py-1 rounded text-slate-600">2x auf Lager</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            
+            <div class="mt-12 text-center bg-brand-50 border border-brand-100 rounded-2xl p-6 max-w-3xl mx-auto">
+                <i data-lucide="truck" class="w-8 h-8 text-brand-500 mx-auto mb-3"></i>
+                <p class="text-slate-700">
+                    <strong>Lieferung:</strong> Ist nach Absprache und gegen Aufpreis möglich.<br>
+                    Für längere Mietzeiträume erstellen wir dir gerne ein individuelles Angebot!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ / Mietbedingungen -->
+    <section id="faq" class="py-20 bg-slate-50">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-slate-900 text-center mb-10">Hinweise zur Vermietung</h2>
+            
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <details class="group glass-panel rounded-2xl cursor-pointer border border-slate-200">
+                    <summary class="flex justify-between items-center font-medium p-6 text-slate-900">
+                        Was brauche ich für die Abholung?
+                        <span class="transition group-open:rotate-180">
+                            <i data-lucide="chevron-down" class="text-brand-500"></i>
+                        </span>
+                    </summary>
+                    <div class="text-slate-600 pb-6 px-6 leading-relaxed">
+                        Bei der Übergabe ist zwingend ein gültiger Personalausweis vorzulegen. Dies dient der Absicherung für beide Seiten.
+                    </div>
+                </details>
+
+                <!-- FAQ Item 2 -->
+                <details class="group glass-panel rounded-2xl cursor-pointer border border-slate-200">
+                    <summary class="flex justify-between items-center font-medium p-6 text-slate-900">
+                        Wann kann ich die Box abholen?
+                        <span class="transition group-open:rotate-180">
+                            <i data-lucide="chevron-down" class="text-brand-500"></i>
+                        </span>
+                    </summary>
+                    <div class="text-slate-600 pb-6 px-6 leading-relaxed">
+                        Die Abholung erfolgt am vereinbarten Termin. Nach vorheriger Absprache können die Boxen jedoch <strong>kostenfrei bis zu zwei Tage früher</strong> abgeholt werden, damit du am Event-Tag keinen Stress hast.
+                    </div>
+                </details>
+
+                <!-- FAQ Item 3 -->
+                <details class="group glass-panel rounded-2xl cursor-pointer border border-slate-200">
+                    <summary class="flex justify-between items-center font-medium p-6 text-slate-900">
+                        Wie muss die Box zurückgegeben werden?
+                        <span class="transition group-open:rotate-180">
+                            <i data-lucide="chevron-down" class="text-brand-500"></i>
+                        </span>
+                    </summary>
+                    <div class="text-slate-600 pb-6 px-6 leading-relaxed">
+                        Die Partybox (sowie eventuelles Zubehör) ist bei der Rückgabe im gleichen gepflegten und funktionstüchtigen Zustand zurückzugeben wie bei der Abholung.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontakt Footer -->
+    <footer id="kontakt" class="bg-white border-t border-slate-200 pt-20 pb-10">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <h2 class="text-4xl font-bold text-slate-900 mb-6">Wir freuen uns auf<br>deine Anfrage!</h2>
+                    <p class="text-slate-600 mb-8 max-w-md">
+                        Schreib uns einfach kurz, wann du feiern möchtest und wir reservieren dir die Technik. Am schnellsten geht es per WhatsApp!
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <!-- PLATZHALTER: Setze hier deine echte Handynummer (inkl. 49) im href ein -->
+                        <a href="https://wa.me/4915902224055?text=Hallo! Ich interessiere mich für die JBL Partybox." target="_blank" class="flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#20bd5a] text-white px-6 py-4 rounded-xl font-bold transition-transform transform hover:scale-105 shadow-sm">
+                            <i data-lucide="message-circle" class="w-6 h-6"></i>
+                            WhatsApp Nachricht
+                        </a>
+                        
+                        <!-- PLATZHALTER: Setze hier deine Mail-Adresse ein -->
+                        <a href="mailto:deine-email@beispiel.de" class="flex items-center justify-center gap-3 glass-panel hover:bg-slate-50 text-slate-900 border border-slate-200 px-6 py-4 rounded-xl font-semibold transition-colors">
+                            <i data-lucide="mail" class="w-6 h-6"></i>
+                            E-Mail schreiben
+                        </a>
+                    </div>
+                </div>
+
+                <div class="glass-panel p-8 rounded-3xl border border-slate-200 shadow-sm">
+                    <h3 class="text-xl font-bold text-slate-900 mb-6 border-b border-slate-100 pb-4">Direktkontakt</h3>
+                    <ul class="space-y-6">
+                        <li class="flex items-center gap-4">
+                            <div class="bg-brand-50 p-3 rounded-full text-brand-600">
+                                <i data-lucide="phone"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-slate-500">Telefon / WhatsApp</p>
+                                <a href="tel:015902224055" class="text-lg font-bold text-slate-900 hover:text-brand-500 transition-colors">01590 2224055</a>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <div class="bg-brand-50 p-3 rounded-full text-brand-600">
+                                <i data-lucide="map-pin"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-slate-500">Standort</p>
+                                <p class="text-lg font-bold text-slate-900">Detmold</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
+                <p>&copy; 2026 Mietservice Schmidt. Alle Rechte vorbehalten.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-slate-900 transition-colors">Impressum</a>
+                    <a href="#" class="hover:text-slate-900 transition-colors">Datenschutz</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Button (Mobile WhatsApp Sticky) -->
+    <!-- PLATZHALTER: Setze hier ebenfalls deine Nummer ein -->
+    <a href="https://wa.me/4915902224055?text=Hallo! Ich habe eine Anfrage." target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform z-50 flex items-center justify-center group">
+        <i data-lucide="message-circle" class="w-7 h-7"></i>
+        <!-- Tooltip -->
+        <span class="absolute right-full mr-4 bg-slate-900 text-white text-sm px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none border border-slate-700 shadow-lg">
+            Direkt anfragen
+        </span>
+    </a>
+
+    <!-- Initialisiere Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
