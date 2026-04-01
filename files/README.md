@@ -1,0 +1,1 @@
+# This folder is created to store files related to Mietservice Schmidt.
