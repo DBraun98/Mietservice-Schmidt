@@ -1,0 +1,5 @@
+# robots.txt für Mietservice Schmidt
+User-agent: *
+Allow: /
+
+Sitemap: https://mietservice-schmidt.de/sitemap.xml
